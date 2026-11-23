@@ -1,0 +1,7 @@
+/target/
+*.log
+/shots/
+/decompile/
+/MECHANICS.md
+/mechanics.json
+.DS_Store

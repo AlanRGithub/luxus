@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Luxus
+Comment=Crea unidades USB autoarrancables de Linux, Windows y FreeDOS de forma rápida y segura
+Comment[en]=Create bootable Linux, Windows and FreeDOS USB drives fast and safely
+Exec=/usr/local/bin/luxus
+Icon=luxus
+Terminal=false
+Type=Application
+Categories=System;Utility;
+Keywords=usb;iso;bootable;format;windows;linux;uefi;disk;freedos;vhd;
+StartupNotify=true

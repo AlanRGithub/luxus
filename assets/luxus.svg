@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B132B"/>
+      <stop offset="55%" stop-color="#142850"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="52%" r="46%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.42"/>
+      <stop offset="60%" stop-color="#2563EB" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#0B132B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#CBD5E1"/>
+      <stop offset="28%" stop-color="#F8FAFC"/>
+      <stop offset="68%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="45%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="bodyEdge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#BAE6FD" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#1E40AF" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#BAE6FD"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded squircle app background -->
+  <rect x="20" y="20" width="472" height="472" rx="108" fill="url(#bgGrad)" stroke="#38BDF8" stroke-opacity="0.28" stroke-width="6"/>
+  <circle cx="256" cy="264" r="210" fill="url(#glowGrad)"/>
+
+  <!-- Subtle drop shadow behind USB -->
+  <rect x="158" y="182" width="196" height="254" rx="34" fill="#020617" fill-opacity="0.45"/>
+
+  <!-- Metallic USB Type-A connector -->
+  <rect x="190" y="74" width="132" height="106" rx="12" fill="url(#metalGrad)" stroke="#64748B" stroke-width="4"/>
+  <!-- Connector inner bevel -->
+  <rect x="198" y="82" width="116" height="90" rx="6" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="2"/>
+  <!-- USB connector contact holes -->
+  <rect x="214" y="102" width="28" height="32" rx="4" fill="#1E293B"/>
+  <rect x="270" y="102" width="28" height="32" rx="4" fill="#1E293B"/>
+  <!-- Gold pin hints inside slots -->
+  <rect x="219" y="107" width="18" height="8" rx="2" fill="#F59E0B" fill-opacity="0.85"/>
+  <rect x="275" y="107" width="18" height="8" rx="2" fill="#F59E0B" fill-opacity="0.85"/>
+
+  <!-- Dark collar grip between connector and body -->
+  <rect x="170" y="164" width="172" height="24" rx="8" fill="#0F172A" stroke="#334155" stroke-width="3"/>
+
+  <!-- Main sleek USB drive casing -->
+  <rect x="154" y="178" width="204" height="250" rx="34" fill="url(#bodyGrad)" stroke="url(#bodyEdge)" stroke-width="5"/>
+
+  <!-- Subtle vertical specular highlight on left side of body -->
+  <rect x="170" y="196" width="20" height="200" rx="10" fill="#FFFFFF" fill-opacity="0.16"/>
+
+  <!-- Original Luxus "L" + high-speed data chevron emblem -->
+  <path d="M 212 222 L 244 222 L 244 316 L 302 316 L 292 346 L 212 346 Z" fill="url(#boltGrad)"/>
+  <!-- High-speed write chevron accent -->
+  <path d="M 268 232 L 296 260 L 268 288 L 284 288 L 312 260 L 284 232 Z" fill="#E0F2FE"/>
+
+  <!-- Glowing activity LED pill at bottom of USB -->
+  <rect x="226" y="388" width="60" height="12" rx="6" fill="#0F172A" fill-opacity="0.55"/>
+  <rect x="234" y="391" width="44" height="6" rx="3" fill="#34D399"/>
+</svg>
