@@ -783,8 +783,25 @@ where
         if n == 0 {
             break;
         }
-        dst.write_all(&buf[..n])
-            .map_err(|e| format!("Error escribiendo imagen de respaldo: {}", e))?;
+        let mut attempt = 0u8;
+        loop {
+            match dst.write_all(&buf[..n]) {
+                Ok(()) => break,
+                Err(e) => {
+                    attempt += 1;
+                    if attempt > 3 || cancel.load(Ordering::SeqCst) {
+                        return Err(format!("Error escribiendo imagen de respaldo: {}", e));
+                    }
+                    log(format!(
+                        "Error transitorio al guardar respaldo ({}); reintentando {}/3...",
+                        e, attempt
+                    ));
+                    thread::sleep(Duration::from_secs(2));
+                    let _ = dst.seek(SeekFrom::Start(copied));
+                    thread::sleep(Duration::from_millis(200));
+                }
+            }
+        }
         copied += n as u64;
         if last_ui.elapsed() >= Duration::from_millis(120) || copied >= total {
             last_ui = Instant::now();
